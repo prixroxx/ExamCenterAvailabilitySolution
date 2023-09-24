@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using AvailabilityAPI.Models;
 
-namespace AvailabilityAPI.DAL
+namespace AvailabilityAPI.Data
 {
     public class AvailabilityDbContext : DbContext
     {
@@ -26,6 +26,7 @@ namespace AvailabilityAPI.DAL
         }
 
         public DbSet<AvailabilityTable> Availabilities { get; set; }
+        public DbSet<ExamCenterTable> ExamCenters { get; set;}
 
 
     }

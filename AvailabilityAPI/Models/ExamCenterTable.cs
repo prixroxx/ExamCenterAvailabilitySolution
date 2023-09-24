@@ -14,8 +14,11 @@ namespace AvailabilityAPI.Models
         [Column("name")]
         public required string Name { get; set; }
 
-        [Column("zipCode")]
-        public double ZipCode { get; set; }
+        [Column("zipcode")]
+        public string ZipCode { get; set; }
+
+        [Column("isActive")]
+        public bool IsActive { get; set; }
 
     }
 }
