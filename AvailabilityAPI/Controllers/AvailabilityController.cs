@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AvailabilityAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("availability")]
     [ApiController]
     public class AvailabilityController : ControllerBase
     {
@@ -26,19 +26,26 @@ namespace AvailabilityAPI.Controllers
 
 
 
-        [HttpPost]
+        [HttpPost("create")]
         public async Task<ActionResult> CreateNewAvailability(AvailabilityTable availability)
         {
             int id = await _service.AddAvailability(availability);
             return Ok(id);
         }
 
-        [HttpPost("examcenters")]
+        [HttpPost]
         public async Task<IEnumerable<Availability>> GetAvailabilitiesInRegion(AvailabilityRequestModel req)
         {
             var availabilities = await _service.AllAvailabilitiesWithinUserRegion(req.duration, req.zipcode, req.distanceInMiles);
             return availabilities;
         }
 
+        [HttpGet("~/test")]
+        public string TestAPIIsRunning()
+        {
+            return "Hello World!!";
+        }
+
+        /* Book Slot Functionality Remaining. Will Come Here. */
     }
 }

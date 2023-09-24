@@ -24,10 +24,8 @@ string dbPassword = "sa";
 
 var connectionString = $"Data Source={dbServer};Initial Catalog={dbName};User ID={dbUser};Password={dbPassword};TrustServerCertificate=True";
 builder.Services.AddDbContext<AvailabilityDbContext>(opt => opt.UseSqlServer(connectionString));
-//builder.Services.AddDbContext<ExamCenterDbContext>(opt => opt.UseSqlServer(connectionString));
 builder.Services.AddScoped<IAvailabilityService, AvailabilityService>();
 builder.Services.AddScoped<IExamCenterService, ExamCenterService>();
-builder.Services.AddScoped<ILocationService, LocationService>();
 
 /* ========================================= */
 
