@@ -27,6 +27,7 @@ builder.Services.AddDbContext<AvailabilityDbContext>(opt => opt.UseSqlServer(con
 //builder.Services.AddDbContext<ExamCenterDbContext>(opt => opt.UseSqlServer(connectionString));
 builder.Services.AddScoped<IAvailabilityService, AvailabilityService>();
 builder.Services.AddScoped<IExamCenterService, ExamCenterService>();
+builder.Services.AddScoped<ILocationService, LocationService>();
 
 /* ========================================= */
 

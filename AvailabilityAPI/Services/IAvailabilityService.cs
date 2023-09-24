@@ -9,6 +9,8 @@ namespace AvailabilityAPI.Services
 
         Task<int> AddAvailability(AvailabilityTable availability);
 
+        Task<ExamCenterTable> IsExamCenterActive(int examCenterId);
 
+        Task<IEnumerable<Availability>> AllAvailabilitiesWithinUserRegion(int duration, string zipcode, double distanceInMiles);
     }
 }
