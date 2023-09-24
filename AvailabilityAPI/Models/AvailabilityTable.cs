@@ -24,5 +24,11 @@ namespace AvailabilityAPI.Models
         [Column("seatcount")]
         public int SeatCount { get; set; }
 
+        [Column("seatsleft")]
+        public int AvailableSeats { get; set; }
+
+        [Column("isActive")]
+        public bool IsActive { get; set; }
+
     }
 }

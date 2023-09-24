@@ -22,4 +22,11 @@ namespace AvailabilityAPI.Models
         public double DistanceMiles { get; set; }
     }
 
+    public class AvailabilityRequestModel
+    {
+        // int duration, string zipcode, double distanceInMiles
+        public int duration { get; set; }
+        public string zipcode { get; set; }
+        public double distanceInMiles { get; set; }
+    }
 }

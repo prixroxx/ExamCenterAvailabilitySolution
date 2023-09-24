@@ -1,4 +1,5 @@
-using AvailabilityAPI.DAL;
+using AvailabilityAPI.Data;
+using AvailabilityAPI.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,8 +21,11 @@ string dbPassword = "sa";
 //var dbName = Environment.GetEnvironmentVariable("DB_NAME");
 //var dbUser = "sa";
 //var dbPassword = Environment.GetEnvironmentVariable("DB_SA_PASSWORD");
+
 var connectionString = $"Data Source={dbServer};Initial Catalog={dbName};User ID={dbUser};Password={dbPassword};TrustServerCertificate=True";
-builder.Services.AddDbContext<AvailabilityDbContext>(ss19 => ss19.UseSqlServer(connectionString));
+builder.Services.AddDbContext<AvailabilityDbContext>(opt => opt.UseSqlServer(connectionString));
+builder.Services.AddScoped<IAvailabilityService, AvailabilityService>();
+builder.Services.AddScoped<IExamCenterService, ExamCenterService>();
 
 /* ========================================= */
 
