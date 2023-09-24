@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AvailabilityAPI", "AvailabilityAPI", "{A1BD27BD-7339-4A1B-A99D-4C22AB5FE14D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvailabilityAPI", "AvailabilityAPI\AvailabilityAPI.csproj", "{289B6466-CDC1-41ED-BFA7-A72888F07CD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{289B6466-CDC1-41ED-BFA7-A72888F07CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{289B6466-CDC1-41ED-BFA7-A72888F07CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{289B6466-CDC1-41ED-BFA7-A72888F07CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{289B6466-CDC1-41ED-BFA7-A72888F07CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{289B6466-CDC1-41ED-BFA7-A72888F07CD4} = {A1BD27BD-7339-4A1B-A99D-4C22AB5FE14D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78616CD7-E079-46AE-8245-C03B07BB4F2F}
+	EndGlobalSection
+EndGlobal
