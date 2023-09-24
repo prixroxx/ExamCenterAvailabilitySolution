@@ -19,6 +19,12 @@ namespace AvailabilityAPI.Services
             return await _context.ExamCenters.ToListAsync();
         }
 
+        public async Task<ExamCenterTable> GetExamCenterById(int examCenterId)
+        {
+            var center = await _context.ExamCenters.FindAsync(examCenterId);
+            return center;
+        }
+
         public async Task<int> AddExamCenter(ExamCenterTable center)
         {
             try

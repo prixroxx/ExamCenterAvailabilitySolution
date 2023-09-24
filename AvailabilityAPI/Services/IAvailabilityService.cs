@@ -6,5 +6,9 @@ namespace AvailabilityAPI.Services
     public interface IAvailabilityService
     {
         ActionResult<IEnumerable<AvailabilityTable>> GetAllAvailabilities();
+
+        Task<int> AddAvailability(AvailabilityTable availability);
+
+
     }
 }
