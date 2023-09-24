@@ -1,0 +1,29 @@
+version: '3.4'
+
+networks:
+  backend:
+
+services:
+  availabilitydb:
+    container_name: availability-db
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=password@12345#
+    networks:
+      - backend
+    ports:
+      - 8007:1433
+  availabilityapi:
+    image: ${DOCKER_REGISTRY-}availabilityapi
+    build:
+      context: .
+      dockerfile: AvailabilityAPI/Dockerfile
+    networks:
+      - backend
+    environment:
+      - DB_HOST=availabilitydb
+      - DB_NAME=availability
+      - DB_SA_PASSWORD=password@12345#
+    ports:
+      - 8008:80
